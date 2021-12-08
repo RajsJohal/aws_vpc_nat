@@ -9,7 +9,7 @@
 - IPv4 and IPv6
 
 **VPC and its resources**
-- add a diagram ![name](path/to/image)
+- add a diagram ![VPC](images/vpc.PNG)
 - Route Table Rules
 - SG Rules
 - Subnet CIDR Blocks
