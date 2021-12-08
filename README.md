@@ -28,16 +28,12 @@
     - Private subnet will have route within VPC (and NAT Instance) does not have a route for Internet Gateway as private subnet needs to be hidden and not accessed directly.
     ![Private RT](images/privateRT.PNG) 
 - **VPC Instances**
-    - Create new DB and app instances from the AMI's.
-    The App VPC AMI security group rules allows port 22 on your IP, port 80 anywhere on IPv4 and port 3000 anywhere on IPv4
-    DB VPC AMI security group rules allow port 27017 for IP of public subnet. 
+    - Create new DB and app instances from the AMI's. App VPC AMI should uto assign a public IP, however DB VPC AMI should disable this option. 
+    - The App VPC AMI security group rules allows port 22 on your IP, port 80 anywhere on IPv4 and port 3000 anywhere on IPv4.
+    - DB VPC AMI security group rules allow port 27017 for IP of public subnet. 
+- **2 Tier Architecture**
+    - The formation of the VPC and its componenets creates a 2 tier architecture, where the app is facing the internet and the database is hidden away, only to be accessed by the application. 
+    - SSH into the app instance and `npm install` `npm start` from the app folder where app.js is located to launch the application, use the app instance public IP:3000/posts in a browser to see the database contents displayed on the web page.
 
-- Subnet CIDR Blocks
-- Connectivity between app and db and app nat db
-
-
-**2 Tier Architecture Deployment in our own VPC**
-![]()
-- should have all rules at all levels required
-
-**Include everything else covered with AWS**
+ **Connectivity between app and db and app nat db**
+ ![NAT](images/NAT.PNG)
