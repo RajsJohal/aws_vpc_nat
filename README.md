@@ -37,3 +37,8 @@
 
  **Connectivity between app and db and app nat db**
  ![NAT](images/NAT.PNG)
+
+ 
+ **NAT Instance**
+
+ [Click here for guide to setup NAT instances](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html)
